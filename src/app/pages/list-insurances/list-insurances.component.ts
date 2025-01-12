@@ -1,11 +1,15 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild,AfterViewInit,Inject } from '@angular/core';
 import { Insurance, InsuranceDto } from '../../models/Insurance';
 import { InsuranceService } from '../../services/insurance.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger"
+import { DOCUMENT } from '@angular/common';
 
+gsap.registerPlugin(ScrollTrigger)
 @Component({
   selector: 'app-list-insurances',
   standalone: true,
@@ -13,7 +17,7 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './list-insurances.component.html',
   styleUrl: './list-insurances.component.css'
 })
-export class ListInsurancesComponent implements OnInit{
+export class ListInsurancesComponent implements OnInit,AfterViewInit{
   @ViewChild('search',{static:false}) searchTerm!:ElementRef;
   @ViewChild('edit',{static:true}) edit!:ElementRef<HTMLDivElement>;
   search:string = "";
@@ -23,11 +27,15 @@ export class ListInsurancesComponent implements OnInit{
   selectedInsurane!:Insurance
   protected editForm!:FormGroup;
   constructor(
+    @Inject(DOCUMENT) private document:Document,
     private service:InsuranceService,
     private fb:FormBuilder,
     private toastr:ToastrService
   ){
   
+  }
+  ngAfterViewInit(): void {
+    this.initScrollAnimations();
   }
   ngOnInit(): void {
     this.getInsurances()
@@ -40,6 +48,39 @@ export class ListInsurancesComponent implements OnInit{
       InsuranceName:this.fb.control('',Validators.required),
       InsuranceDescription:this.fb.control('',Validators.required)
     })
+  }
+  initScrollAnimations():void{
+    gsap.from(this.document.querySelector('.heading'),{
+      duration:0.5,
+      opacity:0,
+      y:-20,
+      stagger:0.2,
+      delay:0.5
+    })
+    gsap.from(this.document.querySelector('.add'),{
+      duration:0.5,
+      opacity:0,
+      x:20,
+      stagger:0.2,
+      delay:0.6
+    })
+    gsap.from(this.document.querySelector('.search-container'),{
+      duration:0.5,
+      opacity:0,
+      x:-20,
+      stagger:0.2,
+      delay:0.6
+    })
+ 
+    gsap.from(this.document.querySelector('.insurance'),{
+      duration:0.5,
+      opacity:0,
+      y:20,
+      stagger:0.2,
+      delay:0.5
+    })
+   
+    
   }
   onSubmit(){
     if(!this.editForm.valid){

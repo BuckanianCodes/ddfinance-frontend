@@ -1,5 +1,5 @@
 <div class="container">
-    <h1 class="heading">Insurance Policies</h1>
+    <h1 class="heading" >Insurance Policies</h1>
     <div class="wrapper">
         <div class="search-container">
             <button 
@@ -18,7 +18,7 @@
         </div>
         <button class="add" routerLink="/add-policy">Add Policy</button>
         <ul>
-            <li *ngFor="let insurance of insurances">
+            <li *ngFor="let insurance of insurances" class="insurance">
                 <h1 class="insuranceName">{{insurance.insuranceName}}</h1>
                 <p>{{insurance.insuranceDescription}}</p>
                <div class="actions">
