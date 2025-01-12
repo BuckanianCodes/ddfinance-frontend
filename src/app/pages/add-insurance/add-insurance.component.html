@@ -1,0 +1,31 @@
+<div class="container">
+    <h1 >Add Insurance</h1>
+    <div class="wrapper">
+        <form
+        [formGroup]="insuranceForm" 
+        class="form-wrapper" 
+        (ngSubmit)="onSubmit()"
+        >
+            <div class="box">
+                <label>Insurance Name</label>
+                <input
+                 formControlName="InsuranceName"
+                 type="text" >
+            </div>
+            <div class="box">
+                <label>Insurance Description</label>
+                <textarea 
+                cols="3"
+                rows="4"
+                formControlName="InsuranceDescription"
+                type="text"></textarea>
+            </div>
+            <button class="submit-btn">submit</button>
+        </form>
+        <button routerLink="/" class="back-btn">
+            <i class="fa fa-chevron-left"></i>
+            back</button>
+    </div>
+   
+    
+</div>

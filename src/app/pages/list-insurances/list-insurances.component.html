@@ -1,0 +1,63 @@
+<div class="container">
+    <h1 class="heading">Insurance Policies</h1>
+    <div class="wrapper">
+        <div class="search-container">
+            <button 
+            class="reset"
+            (click)="onReset()"
+            >reset</button>
+            <input 
+            type="text"
+            #search
+            (keyup)="onSearch()"
+            placeholder="Search here..."
+            >
+            <button
+            class="search"
+            (click)="onSearch()">search</button>
+        </div>
+        <button class="add" routerLink="/add-policy">Add Policy</button>
+        <ul>
+            <li *ngFor="let insurance of insurances">
+                <h1 class="insuranceName">{{insurance.insuranceName}}</h1>
+                <p>{{insurance.insuranceDescription}}</p>
+               <div class="actions">
+                   <button #edit class="edit" (click)="openFormFunction(insurance)" >edit</button>
+                   <button class="del" (click)="openDeleteForm(insurance)"><i class="fa fa-trash"></i></button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="openForm"  class="edit-form">
+        <form 
+        [formGroup]="editForm"
+        (ngSubmit)="onSubmit()">
+            <i class="fa fa-2x fa-times" (click)="closeForm()"></i>
+            <div class="box">
+                <label>Insurance Name</label>
+                <input 
+                formControlName="InsuranceName"
+                type="text">
+            </div>
+            <div class="box">
+                <label>Insurance Description</label>
+                <textarea 
+                cols="3"
+                rows="4"
+                formControlName="InsuranceDescription"
+                type="text"></textarea>
+            </div>
+            <button class="edit-btn">Edit Policy</button>
+        </form>
+    </div>
+
+    <div class="deletediv" *ngIf="openDelete">
+       <div class="delete-wrapper">
+        <i class="fa fa-2x fa-times-circle" (click)="closeDelete()"></i>
+        <h3 *ngIf="selectedInsurane">{{selectedInsurane.insuranceName}}</h3>
+        <button class="confirm-btn" (click)="deleteInsurance()">Confirm Deletion</button>
+       </div>
+    </div>
+</div>
+
+   

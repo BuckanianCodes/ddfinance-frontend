@@ -1,0 +1,215 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+.heading{
+    color: #3d7c99;
+    position: relative;
+
+}
+.heading::after{
+    content: "";
+    background-color: #3d7c99;
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -10px;
+}
+.wrapper{
+    position: relative;
+    max-width: 700px;
+    width: 500px;
+}
+.add{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    background-color: #fafafa;
+    border: 2px solid #9999;
+    border-radius: 5px;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 30px;
+    flex-wrap: wrap;
+
+}
+ul li{
+    list-style: none;
+    background:#d8e9ee ;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+ul li h1{
+    font-size: 20px;
+}
+.actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.edit{
+    background: #3d7c99;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #d8e9ee;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.del{
+    background: #ff6e61;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    text-transform: capitalize; 
+}
+.edit-form{
+    position: fixed; 
+    top: 30%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgba(0, 0,0 ,0.9);
+    width: 400px;
+    height:300px;
+    border-radius: 10px;
+   
+}
+.edit-form form{ 
+    position: relative;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.edit-form form .box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+.edit-form form .box label{
+    color: #fff;
+
+}
+.edit-form form .box input,textarea{
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.edit-btn{
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    background: #ff6e61;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.fa-times{
+    color: #3d7c99;
+    float: right;
+    margin-right: -250px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.deletediv{
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.delete-wrapper{
+    position: relative;
+    
+}
+.delete-wrapper .fa-times-circle{
+  float: right;
+  color: #fff;
+  cursor: pointer;
+}
+.delete-wrapper h3{
+    color: #fafafa;
+    width: 100%;
+}
+.confirm-btn{
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #ff6e61;
+    font-weight: bold;
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+.search-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 5px;
+}
+.search-container input{
+    border: 2px solid #d8e9ee;
+    outline: none;
+    padding: 8px 15px;
+ 
+    background: #fafafa;
+
+}
+.search-container button{
+    outline: none;
+    padding: 8px 15px;
+    border: none;
+   
+    font-weight: bold;
+}
+.search{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #ff6e61;
+}
+.reset{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: #3d7c99;
+}
