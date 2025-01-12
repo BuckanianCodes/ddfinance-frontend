@@ -7,7 +7,6 @@ import { ApiResponse, InsuranceDto } from '../models/Insurance';
   providedIn: 'root'
 })
 export class InsuranceService {
-  //baseUrl = 'http://localhost:5067/api/Insurance'
   baseUrl = 'https://ddfinance.onrender.com/api/Insurance'
 
   constructor(private http:HttpClient) { }
