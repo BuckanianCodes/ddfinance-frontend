@@ -1,27 +1,43 @@
-# Frontend
+# DDFinance Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.
 
-## Development server
+# Introduction
+This is an Angular frontend project that allows the user to view a list of all avilable insurance policies, one also has the ability to search for a specific policy. The user can also add a policy via a form,edit a policy and delete a policy.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Prerequisites
+Install Node.js(https://nodejs.org/en) which includes Node Package Manager
 
-## Code scaffolding
+Install the Angular CLI globally
+npm install -g @angular/cli
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## **Installation**
 
-## Build
+To install Project Title, follow these steps:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone the repository: **`https://github.com/BuckanianCodes/ddfinance-frontend.git`**
+2. Navigate to the project directory: **`cd project-title`**
+3. Install dependencies: **`npm install`**
+4. Build the project: **`npm run build`**
+5. Start the project: **`ng serve`**
 
-## Running unit tests
+## **Usage**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To use Project Title, follow these steps:
 
-## Running end-to-end tests
+1. Open the project in your favorite code editor.
+2. Modify the source code to fit your needs.
+3. Build the project: **`npm run build`**
+4. Start the project: **`ng serve`**
+5. Use the project as desired.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## **Authors and Acknowledgment**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Project Title was created by **[Mark Kariuki](https://github.com/BuckanianCodes)**.
+
+## **Contact**
+
+If you have any questions or comments about Project Title, please contact **[Mark Kariuki](kariukimark115@gmail.com)**.
+
+
