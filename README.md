@@ -20,4 +20,8 @@ Make sure you have Node.js(https://nodejs.org/en) and Angular CLI installed.
 
 On your local machine on your directory run git clone https://github.com/BuckanianCodes/ddfinance-frontend
 
+## Install dependencies
+Run the command below to install all dependencies
+npm install
+
 
