@@ -36,4 +36,8 @@ To use Project Title, follow these steps:
 
 Project Title was created by **[Mark Kariuki](https://github.com/BuckanianCodes)**.
 
+## **Contact**
+
+If you have any questions or comments about Project Title, please contact **[Mark Kariuki](kariukimark115@gmail.com)**.
+
 
