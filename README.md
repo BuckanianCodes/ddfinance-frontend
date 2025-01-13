@@ -1,27 +1,39 @@
-# Frontend
+# DDFinance Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.
+
+# Introduction
+This is an Angular frontend project that allows the user to view a list of all avilable insurance policies, one also has the ability to search for a specific policy. The user can also add a policy via a form,edit a policy and delete a policy.
+
 # Prerequisites
 Install Node.js(https://nodejs.org/en) which includes Node Package Manager
 
-## Setting Up an Angular Project
 Install the Angular CLI globally
 npm install -g @angular/cli
 
-## Creating a workspace
-ng new [PROJECT NAME]
+## **Installation**
 
-## Run the Application
-cd [PROJECT NAME]
-ng serve
+To install Project Title, follow these steps:
 
-# Clone this Repositoy
-Make sure you have Node.js(https://nodejs.org/en) and Angular CLI installed.
+1. Clone the repository: **`https://github.com/BuckanianCodes/ddfinance-frontend`**
+2. Navigate to the project directory: **`cd project-title`**
+3. Install dependencies: **`npm install`**
+4. Build the project: **`npm run build`**
+5. Start the project: **`ng serve`**
 
-On your local machine on your directory run git clone https://github.com/BuckanianCodes/ddfinance-frontend
+## **Usage**
 
-## Install dependencies
-Run the command below to install all dependencies
-npm install
+To use Project Title, follow these steps:
+
+1. Open the project in your favorite code editor.
+2. Modify the source code to fit your needs.
+3. Build the project: **`npm run build`**
+4. Start the project: **`ng serve`**
+5. Use the project as desired.
+
+
+## **Authors and Acknowledgment**
+
+Project Title was created by **[Mark Kariuki](https://github.com/BuckanianCodes)**.
 
 
