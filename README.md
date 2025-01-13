@@ -15,7 +15,7 @@ npm install -g @angular/cli
 
 To install Project Title, follow these steps:
 
-1. Clone the repository: **`https://github.com/BuckanianCodes/ddfinance-frontend`**
+1. Clone the repository: **`https://github.com/BuckanianCodes/ddfinance-frontend.git`**
 2. Navigate to the project directory: **`cd project-title`**
 3. Install dependencies: **`npm install`**
 4. Build the project: **`npm run build`**
