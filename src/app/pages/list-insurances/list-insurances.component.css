@@ -31,6 +31,7 @@
     cursor: pointer;
     top: 0;
     right: 0;
+    margin-right:80px;
     padding: 5px 15px;
     border: none;
     outline: none;

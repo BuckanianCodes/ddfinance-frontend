@@ -16,7 +16,7 @@
             class="search"
             (click)="onSearch()">search</button>
         </div>
-        <button class="add" routerLink="/add-policy">Add Policy</button>
+        <button class="add" routerLink="/add-policy">Add Policy <i class="fa fa-plus"></i> </button>
         <ul>
             <li *ngFor="let insurance of insurances" class="insurance">
                 <h1 class="insuranceName">{{insurance.insuranceName}}</h1>

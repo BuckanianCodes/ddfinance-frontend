@@ -30,8 +30,11 @@ h1::after{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-
+}
+@media screen and (max-width: 600px){
+    .form-wrapper{
+        width: 300px;
+    }
 }
 .wrapper{
     position: relative;
