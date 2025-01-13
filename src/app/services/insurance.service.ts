@@ -8,13 +8,13 @@ import { Params } from '../models/Params';
   providedIn: 'root'
 })
 export class InsuranceService {
-  //baseUrl = 'https://ddfinance.onrender.com/api/Insurance'
-  baseUrl = 'http://localhost:5067/api/Insurance'
+  baseUrl = 'https://ddfinance.onrender.com/api/Insurance'
+  //baseUrl = 'http://localhost:5067/api/Insurance'
 
   constructor(private http:HttpClient) { }
 
   getInsurances(insuranceparams:Params){
-    console.log(insuranceparams)
+    //console.log(insuranceparams)
     let params = new HttpParams();
     if(insuranceparams.search){
       params = params.append('search',insuranceparams.search)

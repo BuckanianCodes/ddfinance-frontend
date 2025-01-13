@@ -115,6 +115,9 @@ export class ListInsurancesComponent implements OnInit,AfterViewInit{
     )
   }
   openFormFunction(insurance:Insurance):void{
+    if(this.openDelete = true){
+      this.openDelete = false
+    }
     if(insurance){
       this.selectedInsurane = insurance;
       this.editForm.patchValue({
@@ -122,12 +125,15 @@ export class ListInsurancesComponent implements OnInit,AfterViewInit{
         InsuranceDescription: insurance.insuranceDescription
       });
     }
-    this.openForm =!this.openForm;
+    this.openForm = true;
   }
   closeForm(){
-    this.openForm =!this.openForm;
+    this.openForm = false
   }
   openDeleteForm(insurance:Insurance):void{
+    if(this.openForm = true){
+      this.openForm = false
+    }
     if(insurance){
       this.selectedInsurane = insurance;
     }
@@ -172,12 +178,18 @@ export class ListInsurancesComponent implements OnInit,AfterViewInit{
     this.getInsurances()
   }
   onAscending(){
+    if(this.insuranceParams.descending = true){
+      this.insuranceParams.descending = false
+    }
     this.insuranceParams.ascending = true
     this.getInsurances()
 
   }
   onDescending()
   {
+    if(this.insuranceParams.ascending = true){
+      this.insuranceParams.ascending = false
+    }
     this.insuranceParams.descending = true
     this.getInsurances()
 
