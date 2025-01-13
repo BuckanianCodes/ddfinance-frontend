@@ -8,6 +8,7 @@ import { ToastrService } from 'ngx-toastr';
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import { DOCUMENT } from '@angular/common';
+import { Params } from '../../models/Params';
 
 gsap.registerPlugin(ScrollTrigger)
 @Component({
@@ -19,6 +20,8 @@ gsap.registerPlugin(ScrollTrigger)
 })
 export class ListInsurancesComponent implements OnInit,AfterViewInit{
   @ViewChild('search',{static:false}) searchTerm!:ElementRef;
+  @ViewChild('asc',{static:false}) asc!:ElementRef;
+  @ViewChild('desc',{static:false}) desc!:ElementRef;
   @ViewChild('edit',{static:true}) edit!:ElementRef<HTMLDivElement>;
   search:string = "";
   openForm :boolean= false;
@@ -26,6 +29,7 @@ export class ListInsurancesComponent implements OnInit,AfterViewInit{
   insurances:any
   selectedInsurane!:Insurance
   protected editForm!:FormGroup;
+  insuranceParams = new Params();
   constructor(
     @Inject(DOCUMENT) private document:Document,
     private service:InsuranceService,
@@ -152,20 +156,31 @@ export class ListInsurancesComponent implements OnInit,AfterViewInit{
   }
 
   getInsurances(){
-    this.service.getInsurances(this.search).subscribe(res => {
+    this.service.getInsurances(this.insuranceParams).subscribe(res => {
       //console.log(res)
       this.insurances = res 
     })
   }
   onSearch(){
-    console.log(this.searchTerm.nativeElement.value)
-    this.search = this.searchTerm.nativeElement.value;
+    //console.log(this.searchTerm.nativeElement.value)
+    this.insuranceParams.search = this.searchTerm.nativeElement.value;
     this.getInsurances()
   }
   onReset(){
     this.searchTerm.nativeElement.value = "";
     this.search = ""
     this.getInsurances()
+  }
+  onAscending(){
+    this.insuranceParams.ascending = true
+    this.getInsurances()
+
+  }
+  onDescending()
+  {
+    this.insuranceParams.descending = true
+    this.getInsurances()
+
   }
 
 }

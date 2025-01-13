@@ -12,6 +12,17 @@
     position: relative;
 
 }
+.sort{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.sort button{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 .heading::after{
     content: "";
     background-color: #3d7c99;

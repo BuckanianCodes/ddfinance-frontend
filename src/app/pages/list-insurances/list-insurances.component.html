@@ -17,6 +17,11 @@
             (click)="onSearch()">search</button>
         </div>
         <button class="add" routerLink="/add-policy">Add Policy <i class="fa fa-plus"></i> </button>
+        <div class="sort">
+            <h2>Sort by</h2>
+            <button (click)="onAscending()" #asc>Ascending</button>
+            <button (click)="onDescending()"  #desc>Descending</button>
+        </div>
         <ul>
             <li *ngFor="let insurance of insurances" class="insurance">
                 <h1 class="insuranceName">{{insurance.insuranceName}}</h1>
