@@ -1,10 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit,Inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { InsuranceService } from '../../services/insurance.service';
 import { FormArray, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { InsuranceDto } from '../../models/Insurance';
 import { ToastrService } from 'ngx-toastr';
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger"
+import { DOCUMENT } from '@angular/common';
 
+gsap.registerPlugin(ScrollTrigger)
 @Component({
   selector: 'app-add-insurance',
   standalone: true,
@@ -12,13 +16,18 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './add-insurance.component.html',
   styleUrl: './add-insurance.component.css'
 })
-export class AddInsuranceComponent implements OnInit{
+export class AddInsuranceComponent implements OnInit,AfterViewInit{
   protected insuranceForm!:FormGroup;
-  constructor(private service:InsuranceService,
+  constructor(
+    @Inject(DOCUMENT) private document:Document,
+    private service:InsuranceService,
     private fb:FormBuilder,
     private toastr:ToastrService,
     private router:Router
   ){}
+  ngAfterViewInit(): void {
+    this.initScrollAnimations();
+  }
   ngOnInit(): void {
     this.initializeForm()
   }
@@ -35,6 +44,22 @@ export class AddInsuranceComponent implements OnInit{
       return
     }
     this.addInsurance()
+  }
+  initScrollAnimations():void{
+    gsap.from(this.document.querySelector('.heading'),{
+      duration:0.5,
+      opacity:0,
+      y:-20,
+      stagger:0.2,
+      delay:0.5
+    })
+    gsap.from(this.document.querySelector('.back-btn'),{
+      duration:0.5,
+      opacity:0,
+      x:20,
+      stagger:0.2,
+      delay:0.6
+    })
   }
   private addInsurance(){
     const insuranceData:InsuranceDto = {

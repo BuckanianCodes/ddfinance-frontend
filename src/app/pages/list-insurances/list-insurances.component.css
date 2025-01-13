@@ -35,8 +35,7 @@
 }
 .wrapper{
     position: relative;
-    max-width: 700px;
-    width: 500px;
+  
 }
 .add{
     position: absolute;
@@ -53,12 +52,14 @@
     border-radius: 5px;
 }
 ul{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
     gap: 30px;
     flex-wrap: wrap;
+
 
 }
 ul li{
@@ -105,6 +106,11 @@ ul li h1{
     height:300px;
     border-radius: 10px;
    
+}
+@media screen and (max-width: 600px){
+    .edit-form{
+        width: 300px;
+    }
 }
 .edit-form form{ 
     position: relative;    
@@ -160,7 +166,7 @@ ul li h1{
     left: 50%; 
     transform: translate(-50%, -50%); 
     background-color: rgba(0, 0, 0, 0.9);
-    width: 200px;
+    width: 300px;
     height: 150px;
     border-radius: 10px;
     display: flex;
