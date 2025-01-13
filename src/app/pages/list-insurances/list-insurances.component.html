@@ -23,7 +23,7 @@
             (click)="onAscending()" #asc>Ascending</button>
             <button (click)="onDescending()"  #desc>Descending</button>
         </div>
-        <ul>
+        <ul *ngIf="insurances">
             <li *ngFor="let insurance of insurances" class="insurance">
                 <h1 class="insuranceName">{{insurance.insuranceName}}</h1>
                 <p>{{insurance.insuranceDescription}}</p>
@@ -33,6 +33,9 @@
                 </div>
             </li>
         </ul>
+        <div *ngIf="!insurances" class="loading">
+            Loading...
+        </div>
     </div>
     <div *ngIf="openForm"  class="edit-form">
         <form 
