@@ -8,7 +8,11 @@ Install Node.js(https://nodejs.org/en) which includes Node Package Manager
 Install the Angular CLI globally
 npm install -g @angular/cli
 
-# Create workspace
+## Create workspace
 ng new [PROJECT NAME]
+
+## Run the Application
+cd [PROJECT NAME]
+ng serve
 
 
